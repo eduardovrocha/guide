@@ -1,0 +1,2 @@
+class AssetCommodity < ApplicationRecord
+end

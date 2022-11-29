@@ -1,0 +1,23 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: guide_it_development
+  pool: 5
+  username: eduardovrocha
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: guide_it_test
+  pool: 5
+  username: eduardovrocha
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: guide_it_production
+  pool: 5
+  username: eduardovrocha
+  password:

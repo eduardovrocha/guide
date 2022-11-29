@@ -1,0 +1,4 @@
+export dev_db_username=
+export dev_db_password=
+export test_db_username=
+export test_db_password=
