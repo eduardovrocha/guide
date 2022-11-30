@@ -12,14 +12,15 @@ class AssetCommodityService
     response = JSON.parse(uri.read)
 
     calculate_valuation = -> (res) {
-      res['chart']['result'][0]['indicators']['quote'][0]['open'][0...30]
+      range = res['chart']['result'][0]['indicators']['quote'][0]['open'][0...30]
+      set_historic(range)
     }
 
     calculate_valuation.call(response)
   end
 
-  def set_historic
-
+  def set_historic(range)
+    AssetCommodity.create!({index_cod: @asset_commodity, last_range: range})
   end
 
 end
