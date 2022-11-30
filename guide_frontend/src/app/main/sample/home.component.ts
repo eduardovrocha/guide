@@ -39,8 +39,6 @@ export class HomeComponent implements OnInit {
       private _coreTranslationService: CoreTranslationService
   ) {
     this.isAdmin = true;
-
-    // Statistics Line Chart
     this.statisticsLine = {
       chart: {
         height: 70,
@@ -128,7 +126,6 @@ export class HomeComponent implements OnInit {
         }
       }
     };
-
     this.data = {
       subscribers_gained: {
         series: [
@@ -260,6 +257,10 @@ export class HomeComponent implements OnInit {
     };
   }
 
+  updateChart(item) {
+    console.log(item)
+  }
+
   // Lifecycle Hooks
   // -----------------------------------------------------------------------------------------------------
 
@@ -301,7 +302,6 @@ export class HomeComponent implements OnInit {
         }, 500);
       }
     });
-
 
   }
 }

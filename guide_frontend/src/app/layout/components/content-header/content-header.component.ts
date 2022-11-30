@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { AssetCommodityService} from "../../../services/asset-commodity.service";
 
 // ContentHeader component interface
 export interface ContentHeader {
@@ -19,10 +20,30 @@ export interface ContentHeader {
   templateUrl: './content-header.component.html'
 })
 export class ContentHeaderComponent implements OnInit {
+
   // input variable
   @Input() contentHeader: ContentHeader;
 
-  constructor() {}
+  // output variable
+  @Output() dataAssetCommodity = new EventEmitter<any>();
 
-  ngOnInit() {}
+  constructor(
+      private assetCommodityService: AssetCommodityService
+  ) {
+  }
+
+  loadAssetCommodity() {
+    this.assetCommodityService.getAssetCommodity()
+        .subscribe((result) => {
+          this.dataAssetCommodity.emit(result);
+        })
+  }
+
+
+  ngOnInit() {
+
+  }
+
+
+
 }
