@@ -17,6 +17,8 @@ class AssetCommodityService
     }
 
     calculate_valuation.call(response)
+  rescue => e
+    {}
   end
 
   def set_historic(range)

@@ -11,7 +11,7 @@ export class AssetCommodityService {
     readonly apiURL: string;
 
     constructor(private http: HttpClient) {
-        this.apiURL = 'http://localhost:3009/asset_commodities/?cod=PETR4.SA';
+        this.apiURL = 'http://localhost:3090/asset_commodities/?cod=PETR4.SA';
     }
 
     getAssetCommodityLastUpdate(): Observable<any> {

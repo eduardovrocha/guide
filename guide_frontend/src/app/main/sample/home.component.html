@@ -9,12 +9,11 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h4 class="card-title">Kick start your project 🚀</h4>
+              <h4 class="card-title">🚀<span class="asset-last-update">last update: DD/MM/YYYY</span></h4>
             </div>
             <div class="card-body pb-1">
               <div class="card-body pb-50">
-                <h6>Profit</h6>
-                <h2 class="font-weight-bolder mb-1">{{ data.profitChart.analyticsData.profit }}</h2>
+
                 <div id="statistics-line-chart" #statisticsLineChartRef>
                   <apx-chart [chart]=" { height: 200, width: statisticsLineChartRef.offsetWidth, type: 'line',
                   toolbar: { show: false }, zoom: { enabled: false }}" [grid]="statisticsLine.grid"
