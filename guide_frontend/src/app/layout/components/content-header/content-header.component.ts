@@ -5,14 +5,6 @@ import { AssetCommodityService} from "../../../services/asset-commodity.service"
 export interface ContentHeader {
   headerTitle: string;
   actionButton: boolean;
-  breadcrumb?: {
-    type?: string;
-    links?: Array<{
-      name?: string;
-      isLink?: boolean;
-      link?: string;
-    }>;
-  };
 }
 
 @Component({
@@ -25,12 +17,9 @@ export class ContentHeaderComponent implements OnInit {
   @Input() contentHeader: ContentHeader;
 
   // output variable
-  @Output() dataAssetCommodity = new EventEmitter<any>();
+  @Output() dataAssetCommodity = new EventEmitter<Object>();
 
-  constructor(
-      private assetCommodityService: AssetCommodityService
-  ) {
-  }
+  constructor(private assetCommodityService: AssetCommodityService) {}
 
   loadAssetCommodity() {
     this.assetCommodityService.getAssetCommodity()
@@ -39,11 +28,7 @@ export class ContentHeaderComponent implements OnInit {
         })
   }
 
-
   ngOnInit() {
-
   }
-
-
 
 }

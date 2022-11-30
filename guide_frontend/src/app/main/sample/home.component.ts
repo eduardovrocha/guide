@@ -258,7 +258,7 @@ export class HomeComponent implements OnInit {
   }
 
   updateChart(item) {
-    console.log(item)
+    console.log(item.data);
   }
 
   // Lifecycle Hooks
@@ -302,6 +302,6 @@ export class HomeComponent implements OnInit {
         }, 500);
       }
     });
-
   }
+
 }

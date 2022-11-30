@@ -66,7 +66,6 @@ export class AppComponent implements OnInit, OnDestroy {
     // Set the main menu as our current menu
     // this._coreMenuService.setCurrentMenu('main');
 
-
     // Add languages to the translation service
     this._translateService.addLangs(['en', 'fr', 'de', 'pt']);
 
