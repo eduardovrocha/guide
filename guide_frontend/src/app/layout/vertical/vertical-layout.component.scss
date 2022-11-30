@@ -1,0 +1,10 @@
+@import '@core/scss/base/core/menu/menu-types/vertical-menu.scss';
+@import '@core/scss/base/core/menu/menu-types/vertical-overlay-menu.scss';
+
+html .content {
+  margin-left: 0px;
+}
+
+.app-content .content {
+  padding-top: 28px !important;
+}
