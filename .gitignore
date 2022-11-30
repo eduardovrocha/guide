@@ -13,3 +13,5 @@ guide_backend/tmp/pids
 guide_backend/tmp/storage
 guide_backend/vendor
 guide_backend/vendor/javascript
+
+guide_frontend/node_modules
