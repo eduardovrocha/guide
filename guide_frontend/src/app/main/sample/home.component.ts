@@ -210,11 +210,7 @@ export class HomeComponent implements OnInit {
         }
       },
       profitChart: {
-        series: [
-          {
-            data: [0, 20, 5, 30, 15, 45]
-          }
-        ],
+        series: [],
         analyticsData: {
           profit: '6,24k'
         }
@@ -257,8 +253,16 @@ export class HomeComponent implements OnInit {
     };
   }
 
+
   updateChart(item) {
-    console.log(item.data);
+    let new_list = [];
+    item.data.last_range.forEach((it) => {
+      new_list.push(parseFloat(it))
+    })
+    this.data.profitChart.series = [{
+      name: "Consumption",
+      data: new_list
+    }]
   }
 
   // Lifecycle Hooks

@@ -14,6 +14,10 @@ export class AssetCommodityService {
         this.apiURL = 'http://localhost:3018/asset_commodities/?cod=PETR4.SA';
     }
 
+    getAssetCommodityLastUpdate(): Observable<any> {
+        return this.http.get(this.apiURL);
+    }
+
     // @ts-ignore
     getAssetCommodity(): Observable<any> {
         return this.http.get(this.apiURL);
