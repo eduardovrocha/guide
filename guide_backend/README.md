@@ -1,24 +1,11 @@
-# README
+# guide_backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+  * acessar a pasta 'guide_backend' pelo terminal 
 
-Things you may want to cover:
+- **requerido**
 
-* Ruby version
+- Rails 7, Ruby 3.1.2 & Postgres
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  * ``rails db:create db:migrate``
+  * ``rails s -p 3009``
